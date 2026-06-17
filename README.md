@@ -18,9 +18,17 @@ docker exec -it akochan /bin/bash
 4. 実行  
 .system 〇〇 
 
-### 実行例（stats取れる）  
+### 実行例
 
+- Statsとるやつ  
 ./system.exe stats ./match_result
+
+- 多分実行したいコマンド
+system.exe full_analyze <ファイル名> <自家の番号>  
+
+<ファイル名>：mjai JSON  
+<自家の番号>： （東家=0、南家=1、西家=2、北家=3）  
+
 
 ## 備考  
 - 雀魂のURLはこのままじゃまだ無理っぽい  
