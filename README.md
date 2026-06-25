@@ -22,7 +22,7 @@ docker build -t mjai-reviewer:latest .
 docker run -rm mjai-reviewer:latest -e akochan --no-open -<牌譜のオプション> <牌譜> -a <自家の引数> -o - > report.html  
 
 - <牌譜のオプション>
-- - i:ローカルのJSONファイル
+ - i:ローカルのJSONファイル
 - - t:てんほうのログファイル
 - <牌譜> 
 - - オプションに応じて選択
