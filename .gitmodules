@@ -1,0 +1,3 @@
+[submodule "mjai-reviewerr"]
+	path = mjai-reviewerr
+	url = https://github.com/Equim-chan/mjai-reviewer.git
