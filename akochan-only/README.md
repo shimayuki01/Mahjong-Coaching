@@ -50,3 +50,13 @@ system.exe full_analyze <ファイル名> <自家の番号>
 ### ④ Dockerfile の COPY コマンドを `COPY . /app` に統一
 * **効果：** サブモジュール（akochanなど）のロード状況によって、コンテナビルド時に「ファイルが見つからない」というエラーが発生するのを防ぎます。Mac側のフォルダ構造をそのまま100%コンテナ内に再現することで、環境によるパスのズレやビルド失敗を確実に回避します。
 
+##  トラブルシューティング備忘録(大脇)
+### ② コンフリクト発生時
+* **効果：** リモートリポジトリとローカルリポジトリの競合を解消して正常にgit更新できます
+git stash -u  
+git fetch origin  
+git log --oneline HEAD..origin/master  
+git pull --rebase origin master  
+git add .  
+git rebase --continue  
+git push -u origin master  
