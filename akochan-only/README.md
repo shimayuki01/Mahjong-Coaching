@@ -52,7 +52,7 @@ system.exe full_analyze <ファイル名> <自家の番号>
 
 ##  トラブルシューティング備忘録(大脇)
 ### ② コンフリクト発生時
-* **効果：** リモートリポジトリとローカルリポジトリの競合を解消して正常にgit更新できます
+* **効果：** リモートリポジトリとローカルリポジトリの競合を解消して正常にgit更新できます  
 git stash -u  
 git fetch origin  
 git log --oneline HEAD..origin/master  
