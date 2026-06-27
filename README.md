@@ -6,14 +6,14 @@
 
 ### mjai-reviewer  
 うまくいったやつ  
-mjai-reviewerからakocha呼び出す必要あった
+mjai-reviewerからakochan呼び出す必要あった
 
 ## 前提事項
 Dockerインストール済み
 gitインストール済み
 
 ## 手順(mjai-reviewer)  
-1. mjai-revieweへディレクトリ移動  
+1. mjai-reviewerへディレクトリ移動  
 cd mjai-reviewer
 
 2. ビルドする  
@@ -24,14 +24,14 @@ docker run -rm mjai-reviewer:latest -e akochan --no-open -<牌譜のオプショ
 
 - <牌譜のオプション>
   - i:ローカルのJSONファイル
-  - t:てんほうのログファイル
+  - t:天鳳のログファイル
 - <牌譜> 
   - オプションに応じて選択
 - <自家の引数>
   - 東家=0、南家=1、西家=2、北家=3
 
 ### 実行例  
-- どっかのてんほうから持ってくるやつ  
+- どっかの天鳳から持ってくるやつ  
 docker run --rm mjai-reviewer:latest -e akochan --no-open -t 2019050417gm-0029-0000-4f2a8622 -a 3 -o - > report.html  
 
 - MortalのJSONからとってきたやつ  
