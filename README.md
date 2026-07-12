@@ -25,6 +25,8 @@ docker run -rm mjai-reviewer:latest -e akochan --no-open -<牌譜のオプショ
 - <牌譜のオプション>
   - i:ローカルのJSONファイル
   - t:天鳳のログファイル
+  - u:天鳳のログURL
+
 - <牌譜> 
   - オプションに応じて選択
 - <自家の引数>
