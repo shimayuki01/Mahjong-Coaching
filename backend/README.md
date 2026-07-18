@@ -54,7 +54,7 @@ curl -X POST http://localhost:8000/report?seat=0 \
 ### 引数
 
 - `--file <path>`: ローカルの JSON ファイルを multipart 形式でアップロードします
-- `--json <path>`: JSON ファイルの内容をリクエストボディとして送信します
+- `--json <path>`: sourceディレクトリ配下のJSON ファイルの内容をリクエストボディとして送信します
 - `--url <url>`: 天鳳のログ URL を送信します
 - `--seat <0-3>`: 自家の番号。デフォルトは `0`
 - `--endpoint <url>`: 呼び出す API の URL。デフォルトは `http://localhost:8000/report`
