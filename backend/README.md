@@ -57,7 +57,6 @@ curl -X POST http://localhost:8000/report?seat=0 \
 - `--json <path>`: JSON ファイルの内容をリクエストボディとして送信します
 - `--url <url>`: 天鳳のログ URL を送信します
 - `--seat <0-3>`: 自家の番号。デフォルトは `0`
-- `--output <path>`: 出力する HTML ファイル名。デフォルトは `report.html`
 - `--endpoint <url>`: 呼び出す API の URL。デフォルトは `http://localhost:8000/report`
 
 ### 処理内容
@@ -65,9 +64,8 @@ curl -X POST http://localhost:8000/report?seat=0 \
 このスクリプトは `curl` コマンドを組み立て、POST リクエストを送信し、返ってきた HTML を指定したファイルに保存します。
 
 ### 例
+python callreport.py --file test.json --seat 0
+python callreport.py --json test.json --seat 0
+python callreport.py --url "https://tenhou.net/0/?log=2026071211gm-0009-0000-4888ed75&tw=1" --seat 0
 
-```bash
-python callreport.py --file test.json --seat 0 --output report.html
-python callreport.py --json test.json --seat 0 --output report.html
-python callreport.py --url "https://tenhou.net/0/?log=2026071211gm-0009-0000-4888ed75&tw=1" --seat 0 --output report.html
-```
+出力は `backend/result` 配下に `file-YYYYMMDD-HHMMSS.html` などの自動生成名で保存されます。
