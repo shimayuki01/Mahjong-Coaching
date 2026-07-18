@@ -46,3 +46,28 @@ curl -X POST http://localhost:8000/report?seat=0 \
 ## Environment
 
 - `MJAI_REVIEWER_IMAGE`: optional image name, default `mjai-reviewer:latest`
+
+## callreport.py
+
+`callreport.py` は、akochanサーバへ必要な情報を渡し、akochan解析結果(html)を返す関数です
+
+### 引数
+
+- `--file <path>`: ローカルの JSON ファイルを multipart 形式でアップロードします
+- `--json <path>`: JSON ファイルの内容をリクエストボディとして送信します
+- `--url <url>`: 天鳳のログ URL を送信します
+- `--seat <0-3>`: 自家の番号。デフォルトは `0`
+- `--output <path>`: 出力する HTML ファイル名。デフォルトは `report.html`
+- `--endpoint <url>`: 呼び出す API の URL。デフォルトは `http://localhost:8000/report`
+
+### 処理内容
+
+このスクリプトは `curl` コマンドを組み立て、POST リクエストを送信し、返ってきた HTML を指定したファイルに保存します。
+
+### 例
+
+```bash
+python callreport.py --file test.json --seat 0 --output report.html
+python callreport.py --json test.json --seat 0 --output report.html
+python callreport.py --url "https://tenhou.net/0/?log=2026071211gm-0009-0000-4888ed75&tw=1" --seat 0 --output report.html
+```
